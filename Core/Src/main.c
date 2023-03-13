@@ -107,6 +107,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_7);
 	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_7);
 	  HAL_UART_Transmit(&huart1, arr, sizeof(arr), HAL_MAX_DELAY);
 	  HAL_Delay(1000);
   }
