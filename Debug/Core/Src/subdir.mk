@@ -5,6 +5,11 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/BSP_ICACHE_Init.c \
+../Core/Src/BSP_MX_GPIO_Init.c \
+../Core/Src/BSP_SystemClock_Config.c \
+../Core/Src/BSP_SystemPower_Config.c \
+../Core/Src/BSP_UART_Init.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32u5xx_hal_msp.c \
 ../Core/Src/stm32u5xx_hal_timebase_tim.c \
@@ -14,6 +19,11 @@ C_SRCS += \
 ../Core/Src/system_stm32u5xx.c 
 
 OBJS += \
+./Core/Src/BSP_ICACHE_Init.o \
+./Core/Src/BSP_MX_GPIO_Init.o \
+./Core/Src/BSP_SystemClock_Config.o \
+./Core/Src/BSP_SystemPower_Config.o \
+./Core/Src/BSP_UART_Init.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32u5xx_hal_msp.o \
 ./Core/Src/stm32u5xx_hal_timebase_tim.o \
@@ -23,6 +33,11 @@ OBJS += \
 ./Core/Src/system_stm32u5xx.o 
 
 C_DEPS += \
+./Core/Src/BSP_ICACHE_Init.d \
+./Core/Src/BSP_MX_GPIO_Init.d \
+./Core/Src/BSP_SystemClock_Config.d \
+./Core/Src/BSP_SystemPower_Config.d \
+./Core/Src/BSP_UART_Init.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32u5xx_hal_msp.d \
 ./Core/Src/stm32u5xx_hal_timebase_tim.d \
@@ -39,7 +54,7 @@ Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32u5xx_hal_msp.d ./Core/Src/stm32u5xx_hal_msp.o ./Core/Src/stm32u5xx_hal_msp.su ./Core/Src/stm32u5xx_hal_timebase_tim.d ./Core/Src/stm32u5xx_hal_timebase_tim.o ./Core/Src/stm32u5xx_hal_timebase_tim.su ./Core/Src/stm32u5xx_it.d ./Core/Src/stm32u5xx_it.o ./Core/Src/stm32u5xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32u5xx.d ./Core/Src/system_stm32u5xx.o ./Core/Src/system_stm32u5xx.su
+	-$(RM) ./Core/Src/BSP_ICACHE_Init.d ./Core/Src/BSP_ICACHE_Init.o ./Core/Src/BSP_ICACHE_Init.su ./Core/Src/BSP_MX_GPIO_Init.d ./Core/Src/BSP_MX_GPIO_Init.o ./Core/Src/BSP_MX_GPIO_Init.su ./Core/Src/BSP_SystemClock_Config.d ./Core/Src/BSP_SystemClock_Config.o ./Core/Src/BSP_SystemClock_Config.su ./Core/Src/BSP_SystemPower_Config.d ./Core/Src/BSP_SystemPower_Config.o ./Core/Src/BSP_SystemPower_Config.su ./Core/Src/BSP_UART_Init.d ./Core/Src/BSP_UART_Init.o ./Core/Src/BSP_UART_Init.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32u5xx_hal_msp.d ./Core/Src/stm32u5xx_hal_msp.o ./Core/Src/stm32u5xx_hal_msp.su ./Core/Src/stm32u5xx_hal_timebase_tim.d ./Core/Src/stm32u5xx_hal_timebase_tim.o ./Core/Src/stm32u5xx_hal_timebase_tim.su ./Core/Src/stm32u5xx_it.d ./Core/Src/stm32u5xx_it.o ./Core/Src/stm32u5xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32u5xx.d ./Core/Src/system_stm32u5xx.o ./Core/Src/system_stm32u5xx.su
 
 .PHONY: clean-Core-2f-Src
 
